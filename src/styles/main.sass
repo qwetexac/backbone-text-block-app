@@ -1,0 +1,73 @@
+body 
+	background-color: #f4f4f4
+	margin: 0
+	*
+		box-sizing: border-box
+
+.container 
+	display: flex
+	#text-blocks 
+		width: 70%
+		padding: 30px 15px
+	#actions
+		width: 30%
+		background-color: #FFF
+		position: fixed
+		right: 0
+		top: 0
+		height: 100vh
+		padding: 30px 15px
+		button
+			background-color: #2b80da
+			border: none
+			outline: none
+			padding: 10px 20px
+			color: #fff
+			font-size: 16px
+			border-radius: 3px
+			cursor: pointer
+			&:hover
+				background-color: #2670bf
+			&:active
+				background-color: #1b518c
+
+.text-block 
+	background-color: #fff
+	border: 2px solid #ccc
+	border-radius: 3px
+	padding: 20px
+	position: relative
+	margin: 20px 0
+	transition: all .5s ease-in
+	&:first-child
+		margin-top: 0
+	&.active
+		border-color: red
+		box-shadow: 0 2px 2px #ccc
+	h3
+		margin-top: 0
+	i.close
+		position: absolute
+		top: 15px
+		right: 30px
+		cursor: pointer
+		width: 20px
+		height: 20px
+		&:hover
+			&:before, &:after
+				background-color: #000
+		&:before, &:after
+			position: absolute
+			top: 50%
+			left: 0%
+			width: 20px
+			height: 3px
+			background-color: #9a9999
+			display: block
+			content: ''
+			transform: rotate(45deg)
+		&:after
+			transform: rotate(-45deg)
+
+#stats
+	font-size: 20px
